@@ -4,7 +4,7 @@
 
 ## What he coaches
 - AI for sales and operations: call notes, follow-up drafts, pipeline checks and reports with Claude Code, with a human approving anything sent
-- Sales: a repeatable sales process for calls or in person, built on the DRIA framework (Desire, Reality, Impact, Ask), objection handling, sales conversation reviews
+- Sales: a repeatable sales process for calls or in person, built on proven sales frameworks and negotiation skills, objection handling, sales conversation reviews
 - Nervous system regulation: physical and mental wellness for people who sell and lead under pressure
 - Dominating Quarters: 3 to 5 quarterly goals, a weekly scorecard and a weekly leadership meeting
 
