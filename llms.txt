@@ -6,7 +6,7 @@
 - AI for sales and operations: call notes, follow-up drafts, pipeline checks and reports with Claude Code, with a human approving anything sent
 - Sales: the DRIA call framework (Desire, Reality, Impact, Ask), objection handling, call reviews
 - Nervous system regulation: physical and mental wellness for people who sell and lead under pressure
-- Dominating Quarters: 3 to 5 quarterly goals, a weekly scorecard and a weekly leadership meeting, run in Strety
+- Dominating Quarters: 3 to 5 quarterly goals, a weekly scorecard and a weekly leadership meeting
 
 ## Who it's for
 - Owners and operators doing about $10K a month on hustle, ready for $50K+ months
