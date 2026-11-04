@@ -1,6 +1,6 @@
 # Esteban Baez Coaching Dojo
 
-> Esteban Baez is an AI sales trainer and business consultant for business owners going from $10K to $50K+ a month. He teaches owners and sales teams to close with a repeatable call structure, run sales and operations with Claude Code, regulate their nervous system under pressure, and grow the business with a quarterly goals and weekly meeting rhythm ("Dominating Quarters").
+> Esteban Baez is an AI sales trainer and business consultant for business owners going from $10K to $50K a month. He teaches owners and sales teams to close with a repeatable call structure, run sales and operations with Claude Code, regulate their nervous system under pressure, and grow the business with a quarterly goals and weekly meeting rhythm ("Dominating Quarters").
 
 ## What he coaches
 - AI for sales and operations: call notes, follow-up drafts, pipeline checks and reports with Claude Code, with a human approving anything sent
