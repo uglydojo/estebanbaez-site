@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Join the Coaching Dojo | Esteban Baez</title>
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Private enrollment page. Same house style as estebanbaez.com: black, gold, red. Three plan cards, the year plan featured. */
+:root{
+  --black:#000; --panel:#141414; --line:#2a2a2a;
+  --gold:#ffcc00; --red:#cc0000; --white:#fff; --gray:#9a9a9a;
+  --display:"Black Han Sans", Impact, "Arial Black", sans-serif;
+  --body:"Work Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:1080px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;letter-spacing:.5px;text-wrap:balance}
+p{margin:0}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:500}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.top img{display:block;height:64px;width:auto;max-width:70vw}
+.top a{color:var(--gray);font-size:14px;text-decoration:none}
+.hero{padding-block:56px 36px;display:grid;gap:16px;max-width:760px}
+.hero h1{font-size:clamp(40px,6.5vw,72px);text-transform:uppercase}
+.hero h1 span{color:var(--gold)}
+.hero p{color:#ddd;font-size:19px;max-width:60ch}
+.badge{display:inline-block;background:var(--red);color:var(--white);font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:3px;width:max-content}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch;padding-bottom:40px}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:30px 26px;display:flex;flex-direction:column;gap:16px;min-width:0;position:relative}
+.plan.best{border:2px solid var(--gold);box-shadow:0 0 40px rgba(255,204,0,.12)}
+.plan .tag{position:absolute;top:-13px;left:24px;background:var(--gold);color:var(--black);font-family:var(--display);font-size:14px;letter-spacing:1px;padding:4px 12px;border-radius:3px}
+.plan h2{font-size:26px;text-transform:uppercase;color:var(--gold)}
+.price{font-family:var(--display);font-size:52px;line-height:1;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--body);font-size:16px;color:var(--gray);letter-spacing:0}
+.sub{color:var(--gray);font-size:15px;min-height:2.6em}
+.save{font-family:var(--mono);font-size:13px;color:var(--gold)}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:15.5px;color:#ddd;flex:1}
+.plan li{padding-left:24px;position:relative}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.pay{display:flex;justify-content:center;align-items:center;gap:10px;background:var(--gold);color:var(--black);font-family:var(--display);font-size:18px;letter-spacing:1px;text-decoration:none;padding:15px 18px;border-radius:4px;transition:transform .15s ease}
+.pay:hover{transform:translateY(-2px)}
+.pay:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+.pay.ghost{background:transparent;color:var(--gold);border:2px solid var(--gold)}
+.pay[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.included{border-top:1px solid var(--line);padding-block:40px;display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
+.included > *{min-width:0}
+.included h3{font-size:34px;text-transform:uppercase}
+.included ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;color:#ddd}
+.included li{padding-left:24px;position:relative}
+.included li::before{content:"→";position:absolute;left:0;color:var(--red)}
+.fine{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--gray);font-size:14px;display:grid;gap:8px;max-width:820px}
+.fine a{color:var(--gold)}
+@media (max-width:860px){.plans,.included{grid-template-columns:1fr}.included ul{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){.pay{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a href="/"><img src="/eb-logo-wide.jpg" alt="Esteban Baez Coaching Dojo" width="720" height="252"></a>
+    <a href="/">← Back to estebanbaez.com</a>
+  </header>
+
+  <div class="hero">
+    <span class="badge">Founding client rates</span>
+    <h1>Join the <span>Coaching Dojo.</span></h1>
+    <p>You've had the virtual coffee. Now let's build your $50K+ months. Pick the plan that fits, pay securely, and we'll book your first session.</p>
+  </div>
+
+  <div class="plans">
+    <article class="plan">
+      <h2>Monthly</h2>
+      <div class="price">$1,000<small> /month</small></div>
+      <p class="sub">Billed monthly. 3-month minimum.</p>
+      <ul>
+        <li>Weekly 1-on-1 coaching</li>
+        <li>Sales, AI, nervous system and quarterly rhythm</li>
+        <li>Support between sessions</li>
+      </ul>
+      <a class="pay ghost" data-plan="monthly" href="#">Start monthly</a>
+    </article>
+
+    <article class="plan">
+      <h2>Quarter</h2>
+      <div class="price">$2,500<small> /quarter</small></div>
+      <p class="sub">Paid upfront for 3 months.</p>
+      <p class="save">Save $500 vs. monthly</p>
+      <ul>
+        <li>Everything in Monthly</li>
+        <li>Your first quarter planned with you: 3 to 5 goals, a scorecard and a weekly meeting</li>
+      </ul>
+      <a class="pay" data-plan="quarter" href="#">Pay for the quarter</a>
+    </article>
+
+    <article class="plan best">
+      <span class="tag">Best value</span>
+      <h2>Full year</h2>
+      <div class="price">$8,000<small> /year</small></div>
+      <p class="sub">Paid upfront. That's $2,000 a quarter.</p>
+      <p class="save">Save $4,000 vs. monthly</p>
+      <ul>
+        <li>Everything in Quarter</li>
+        <li>All four quarters planned and reviewed with you</li>
+        <li>Founding rate locked for the year</li>
+      </ul>
+      <a class="pay" data-plan="year" href="#">Pay for the year</a>
+    </article>
+  </div>
+
+  <section class="included">
+    <h3>What we <span style="color:var(--gold)">work on</span></h3>
+    <ul>
+      <li>AI for sales and operations</li>
+      <li>A sales call process you can repeat</li>
+      <li>Nervous system regulation</li>
+      <li>Dominating Quarters: goals, scorecard, weekly meeting</li>
+      <li>Follow-up that doesn't drop leads</li>
+      <li>A team that runs without you in every detail</li>
+    </ul>
+  </section>
+
+  <div class="fine">
+    <p>Payments are processed securely by Stripe. Cards, Apple Pay, Klarna, Cash App Pay and more accepted.</p>
+    <p>After you pay, you'll get a receipt by email, and I'll reach out within 24 hours to book your first session. Questions before you pay? <a href="https://calendly.com/estebanbaezcoaching/virtual-coffee-with-esteban">Grab a virtual coffee</a> first.</p>
+  </div>
+</div>
+<script>
+  // Stripe Payment Links. Paste each link here.
+  const PAY_LINKS = {
+    monthly: "https://buy.stripe.com/8x23cwcawafAeVYd1u5os02",
+    quarter: "https://buy.stripe.com/8x25kE3E09bw8xA4uY5os00",
+    year: "https://buy.stripe.com/5kQaEY7UgfzU0149Pi5os01"
+  };
+  document.querySelectorAll(".pay").forEach(a => {
+    const url = PAY_LINKS[a.dataset.plan];
+    if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+    else { a.setAttribute("aria-disabled", "true"); a.textContent = "Payment link coming soon"; }
+  });
+</script>
+</body>
+</html>
