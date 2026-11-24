@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>GoStaffy Black Friday | Esteban Baez</title>
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Private Black Friday offer page for GoStaffy. Same house style as estebanbaez.com: black, gold, red.
+   VSL flow: video + headline, proof, problem, the 6 sessions, the offer stack, how it works, FAQ, final CTA. */
+:root{
+  --black:#000; --panel:#141414; --line:#2a2a2a;
+  --gold:#ffcc00; --red:#cc0000; --white:#fff; --gray:#9a9a9a; --soft:#ddd;
+  --display:"Black Han Sans", Impact, "Arial Black", sans-serif;
+  --body:"Work Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:1000px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;letter-spacing:.5px;text-wrap:balance}
+p{margin:0}
+.gold{color:var(--gold)}
+.red{color:var(--red)}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:500}
+.badge{display:inline-block;background:var(--red);color:var(--white);font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:3px;width:max-content;max-width:100%}
+
+/* Top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.top img{display:block;height:56px;width:auto;max-width:60vw}
+.top .for{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+
+/* Hero + video */
+.hero{padding-block:48px 40px;display:grid;gap:22px;text-align:center;justify-items:center}
+.hero h1{font-size:clamp(36px,6vw,66px);text-transform:uppercase;max-width:16ch}
+.hero .sub{color:var(--soft);font-size:19px;max-width:58ch}
+.video{width:100%;max-width:860px;aspect-ratio:16/9;border:2px solid var(--gold);border-radius:8px;overflow:hidden;background:var(--panel);box-shadow:0 0 60px rgba(255,204,0,.12)}
+.video iframe{width:100%;height:100%;border:0;display:block}
+.video-note{font-family:var(--mono);font-size:13px;color:var(--gray)}
+
+/* Buttons */
+.cta{display:inline-flex;justify-content:center;align-items:center;gap:10px;background:var(--gold);color:var(--black);font-family:var(--display);font-size:20px;letter-spacing:1px;text-decoration:none;padding:17px 30px;border-radius:4px;transition:transform .15s ease, box-shadow .15s ease;text-align:center}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,204,0,.25)}
+.cta:focus-visible{outline:3px solid var(--white);outline-offset:3px}
+.cta[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.cta-meta{font-size:14px;color:var(--gray)}
+.cta-block{display:grid;gap:10px;justify-items:center}
+
+/* Proof strip */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line)}
+.stat{padding:26px 16px;text-align:center;display:grid;gap:4px;min-width:0}
+.stat + .stat{border-left:1px solid var(--line)}
+.stat b{font-family:var(--display);font-weight:400;font-size:clamp(34px,5vw,48px);color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{color:var(--gray);font-size:14.5px}
+.proof-note{color:var(--gray);font-size:13px;text-align:center;padding-top:10px}
+
+/* Sections */
+section{padding-block:64px;border-bottom:1px solid var(--line);display:grid;gap:24px}
+.sec-head{display:grid;gap:12px;max-width:720px}
+.sec-head h2{font-size:clamp(30px,4.6vw,46px);text-transform:uppercase}
+.sec-head p{color:var(--soft);font-size:18px}
+.letter{display:grid;gap:16px;max-width:680px;color:var(--soft);font-size:18px}
+.letter strong{color:var(--white)}
+
+/* Sessions timeline */
+.sessions{display:grid;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.session{display:grid;grid-template-columns:96px 1fr;gap:20px;padding:24px;background:var(--panel)}
+.session + .session{border-top:1px solid var(--line)}
+.session .num{font-family:var(--display);font-size:44px;line-height:1;color:var(--gold)}
+.session .num small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--gray);text-transform:uppercase;margin-top:6px}
+.session > div{min-width:0;display:grid;gap:8px}
+.session h3{font-size:24px;text-transform:uppercase}
+.session p{color:var(--soft);font-size:16px}
+.session ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.session li{font-family:var(--mono);font-size:12.5px;color:var(--gold);border:1px solid #3a3200;background:#1a1600;border-radius:999px;padding:3px 10px}
+.session .out{font-size:15px;color:var(--white)}
+.session .out::before{content:"→ ";color:var(--red)}
+
+/* DRIA mini card */
+.dria{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.dria div{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px;display:grid;gap:4px;min-width:0}
+.dria b{font-family:var(--display);font-weight:400;font-size:34px;color:var(--gold);line-height:1}
+.dria span{font-size:14px;color:var(--soft)}
+
+/* Offer stack */
+.offer{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.offer > *{min-width:0}
+.stack{background:var(--panel);border:2px solid var(--gold);border-radius:8px;padding:28px;display:grid;gap:14px;box-shadow:0 0 50px rgba(255,204,0,.1);position:relative}
+.stack .tag{position:absolute;top:-14px;left:24px;background:var(--red);color:var(--white);font-family:var(--display);font-size:15px;letter-spacing:1px;padding:4px 12px;border-radius:3px}
+.stack h3{font-size:28px;text-transform:uppercase;color:var(--gold)}
+.rows{display:grid;gap:0}
+.rows div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:16px}
+.rows div span:last-child{font-variant-numeric:tabular-nums;color:var(--soft);white-space:nowrap}
+.rows .strike span:last-child{text-decoration:line-through;color:var(--gray)}
+.rows .free span:last-child{color:var(--gold);font-weight:600}
+.price-line{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-top:6px}
+.price-line b{font-family:var(--display);font-weight:400;font-size:58px;line-height:1;font-variant-numeric:tabular-nums}
+.price-line span{color:var(--gray)}
+.split{font-family:var(--mono);font-size:14px;color:var(--gold)}
+.side{display:grid;gap:18px}
+.side .box{border:1px solid var(--line);border-radius:8px;padding:22px;display:grid;gap:8px}
+.side h4{margin:0;font-family:var(--display);font-weight:400;font-size:20px;text-transform:uppercase;letter-spacing:.5px}
+.side p{color:var(--soft);font-size:15.5px}
+.expire{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:13.5px;color:var(--white);background:#1a0000;border:1px solid #4a0000;border-radius:6px;padding:12px 14px}
+.expire b{color:var(--red);font-weight:500}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px;display:grid;gap:8px;align-content:start;min-width:0}
+.step::before{counter-increment:s;content:"Step " counter(s);font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.step h3{font-size:20px;text-transform:uppercase}
+.step p{color:var(--soft);font-size:15px}
+.step a{color:var(--gold)}
+
+/* Takeaways */
+.keeps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 24px;margin:0;padding:0;list-style:none}
+.keeps li{padding-left:26px;position:relative;color:var(--soft)}
+.keeps li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:780px}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 20px}
+.faq summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--gold);font-family:var(--display);font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--soft);padding-top:10px;font-size:16px}
+
+/* Final */
+.final{text-align:center;justify-items:center;border-bottom:0}
+.final h2{font-size:clamp(32px,5vw,54px);text-transform:uppercase;max-width:18ch}
+.final p{color:var(--soft);max-width:56ch;font-size:18px}
+.ps{max-width:640px;text-align:left;color:var(--soft);font-size:16px;border-top:1px solid var(--line);padding-top:24px;display:grid;gap:10px}
+.ps b{color:var(--white)}
+footer{color:var(--gray);font-size:13px;padding-block:24px 48px;text-align:center}
+
+@media (max-width:860px){
+  .offer{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .keeps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .stats{grid-template-columns:1fr}
+  .stat + .stat{border-left:0;border-top:1px solid var(--line)}
+  .session{grid-template-columns:1fr;gap:10px}
+  .dria{grid-template-columns:1fr 1fr}
+  .steps,.keeps{grid-template-columns:1fr}
+  .cta{width:100%;font-size:18px;padding:16px 18px}
+  .price-line b{font-size:48px}
+}
+@media (prefers-reduced-motion: reduce){.cta{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a href="/"><img src="/eb-logo-wide.jpg" alt="Esteban Baez Coaching Dojo" width="720" height="252"></a>
+    <span class="for">Private offer · GoStaffy</span>
+  </header>
+
+  <div class="hero">
+    <span class="badge">Black Friday · 6 sessions for the price of 4</span>
+    <h1>John, let's build GoStaffy a sales team that <span class="gold">closes.</span></h1>
+    <p class="sub">Six private 90-minute sessions where I hand your team the exact process I've used to close 850+ deals: how to run the call, handle objections, keep every lead alive, and let AI do the follow-up.</p>
+    <div class="video" id="video" hidden></div>
+    <div class="cta-block">
+      <a class="cta pay" href="#">Lock in Black Friday: $500 today →</a>
+      <span class="cta-meta">Payment 1 of 2 · Secure checkout by Stripe</span>
+    </div>
+  </div>
+
+  <div class="stats" aria-label="Track record">
+    <div class="stat"><b>3,100+</b><span>sales calls booked on my calendar</span></div>
+    <div class="stat"><b>850+</b><span>deals I closed myself</span></div>
+    <div class="stat"><b>41%</b><span>close rate on qualified calls, Apr to Oct 2026</span></div>
+  </div>
+  <p class="proof-note">Counted from my own calendar and recorded calls since 2022.</p>
+
+  <section>
+    <div class="sec-head">
+      <span class="label">The real problem</span>
+      <h2>Your reps don't have a talent problem. <span class="gold">They have a system problem.</span></h2>
+    </div>
+    <div class="letter">
+      <p>Here's what I see in almost every growing sales team. Good people. Leads coming in. Some close, some go cold, and nobody can tell you exactly why.</p>
+      <p>Every rep runs the call their own way. Objections get argued instead of handled. Leads sit in the pipeline with no owner and no next step. Follow-up happens when someone remembers.</p>
+      <p><strong>None of that is fixed by working harder. It's fixed by installing a system</strong>, and then training your team until it runs without you watching every call.</p>
+      <p>That's what these six sessions do.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="label">The 6 sessions</span>
+      <h2>Six sessions. <span class="gold">One complete sales system.</span></h2>
+      <p>90 minutes each, recorded, so your team can rewatch and train new hires on them.</p>
+    </div>
+
+    <div class="sessions">
+      <article class="session">
+        <div class="num">01<small>Onboarding</small></div>
+        <div>
+          <h3>Onboarding and your sales machine</h3>
+          <p>You fill out a short onboarding form before we meet. Then we map your process from lead to paid, see who does what, and set up the weekly numbers.</p>
+          <ul><li>Lead to paid map</li><li>Roles</li><li>Weekly scorecard</li><li>Speed to lead</li></ul>
+          <p class="out">You know exactly where deals are leaking.</p>
+        </div>
+      </article>
+      <article class="session">
+        <div class="num">02<small>The call</small></div>
+        <div>
+          <h3>DRIA: running the sales call</h3>
+          <p>The four-step call structure I use on every call. Find what they want, where they really are, what the gap costs them, then ask.</p>
+          <div class="dria" aria-label="DRIA">
+            <div><b>D</b><span>Desire</span></div>
+            <div><b>R</b><span>Reality</span></div>
+            <div><b>I</b><span>Impact</span></div>
+            <div><b>A</b><span>Ask</span></div>
+          </div>
+          <p class="out">Every rep runs the same call, and the next meeting is booked before they hang up.</p>
+        </div>
+      </article>
+      <article class="session">
+        <div class="num">03<small>Objections</small></div>
+        <div>
+          <h3>Handling objections</h3>
+          <p>Agree, restate, and move forward with a question. Real negotiation tactics instead of arguing. We build a response for your top 5 objections and drill them live.</p>
+          <ul><li>Your top 5 objections</li><li>Labels</li><li>No-oriented questions</li><li>Live drills</li></ul>
+          <p class="out">"I need to think about it" stops ending deals.</p>
+        </div>
+      </article>
+      <article class="session">
+        <div class="num">04<small>Pipeline</small></div>
+        <div>
+          <h3>Pipeline: no orphan leads</h3>
+          <p>One rule changes everything: every lead has an owner, a next step and a date. We set clear stages, a weekly pipeline review, and clean up your live pipeline together.</p>
+          <ul><li>Owner, next step, date</li><li>Clear stages</li><li>Weekly review</li><li>Lead routing</li></ul>
+          <p class="out">No lead falls through the cracks again.</p>
+        </div>
+      </article>
+      <article class="session">
+        <div class="num">05<small>AI</small></div>
+        <div>
+          <h3>Follow-up that runs on AI</h3>
+          <p>Every call recorded, summarized, and turned into a 4-touch follow-up drafted in your voice. A human approves every message. A reply pauses the sequence.</p>
+          <ul><li>Call summaries</li><li>Day 0 · 4 · 8 · 14</li><li>Human approves</li><li>Reply pauses it</li></ul>
+          <p class="out">Follow-up happens even on your busiest week.</p>
+        </div>
+      </article>
+      <article class="session">
+        <div class="num">06<small>Team</small></div>
+        <div>
+          <h3>Running a healthy sales team</h3>
+          <p>A weekly team meeting run on the numbers, call reviews phase by phase, and how to coach your reps. We finish by building your 90-day sales plan.</p>
+          <ul><li>Weekly meeting</li><li>Call reviews</li><li>Coaching reps</li><li>90-day plan</li></ul>
+          <p class="out">Your team keeps improving after our sessions end.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="label">What you keep</span>
+      <h2>Yours <span class="gold">to keep.</span></h2>
+    </div>
+    <ul class="keeps">
+      <li>All 6 session recordings</li>
+      <li>A weekly scorecard template</li>
+      <li>A DRIA call guide for your reps</li>
+      <li>Responses to your top objections</li>
+      <li>Pipeline rules and a weekly checklist</li>
+      <li>Your first AI follow-up sequence</li>
+      <li>Your 90-day sales plan</li>
+      <li>A team that can train new hires</li>
+      <li>A clear next step for cycle two</li>
+    </ul>
+  </section>
+
+  <section id="offer">
+    <div class="sec-head">
+      <span class="label">The Black Friday offer</span>
+      <h2>Six sessions <span class="gold">for the price of four.</span></h2>
+    </div>
+    <div class="offer">
+      <div class="stack">
+        <span class="tag">Black Friday</span>
+        <h3>Sales System Cycle</h3>
+        <div class="rows">
+          <div><span>4 private 90-minute sessions</span><span>$1,000</span></div>
+          <div class="free"><span>+ 2 bonus sessions</span><span>Free</span></div>
+          <div><span>All sessions recorded</span><span>Included</span></div>
+          <div><span>Templates, call guide and 90-day plan</span><span>Included</span></div>
+          <div class="strike"><span>Regular price for 6 sessions</span><span>$1,500</span></div>
+        </div>
+        <div class="price-line"><b>$1,000</b><span>total for all 6 sessions</span></div>
+        <p class="split">2 payments of $500 · about $167 a session</p>
+        <a class="cta pay" href="#">Pay $500 and get started →</a>
+        <span class="cta-meta">Payment 1 of 2 · Cards, Apple Pay, Klarna, Cash App Pay</span>
+      </div>
+      <div class="side">
+        <div class="expire"><span>⏱</span><span>Use your 6 sessions by <b>December 31, 2027</b>.</span></div>
+        <div class="box">
+          <h4>Split it in two</h4>
+          <p>Pay $500 today to start. The second $500 is due before session 4, so you're 3 sessions in before you pay the rest.</p>
+        </div>
+        <div class="box">
+          <h4>Keep going after</h4>
+          <p>Want more once the 6 sessions are done? Continue at $1,000 a month, or save with a full quarter for $2,500 or a full year for $8,000. <a href="/join/" style="color:var(--gold)">See the plans</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="label">How it works</span>
+      <h2>Start <span class="gold">this week.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Pay $500</h3><p>Secure checkout by Stripe. You get a receipt by email right away.</p></div>
+      <div class="step"><h3>Onboarding form</h3><p>A short form about your team, your numbers and your goals, so session 1 starts with real data.</p></div>
+      <div class="step"><h3>Book session 1</h3><p>Pick a 90-minute slot on my calendar. I'll send the link right after you pay.</p></div>
+      <div class="step"><h3>Second $500</h3><p>Due before session 4. Then we finish the system together.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="label">Questions</span>
+      <h2>Questions, <span class="gold">answered.</span></h2>
+    </div>
+    <div class="faq">
+      <details><summary>Who should be in the sessions?</summary><p>You, plus anyone who sells or manages sales. The sessions are built for the people running the calls and the person leading them.</p></details>
+      <details><summary>Are the sessions recorded?</summary><p>Yes. Every session is recorded on Zoom and you keep the recordings, so your team can rewatch them and train new hires.</p></details>
+      <details><summary>When do we meet?</summary><p>You book each session on my calendar. Evening and weekend times are available. Most teams meet once a week, but you can go faster or slower.</p></details>
+      <details><summary>How long do I have to use the sessions?</summary><p>All 6 sessions must be used by December 31, 2027.</p></details>
+      <details><summary>Do I need to be technical for the AI part?</summary><p>No. I show you how it works with your real calls, and we build your first follow-up sequence together. A person approves every message before it goes out.</p></details>
+      <details><summary>What happens after session 6?</summary><p>If you want to keep going, it's $1,000 a month, $2,500 for a full quarter, or $8,000 for a full year. If you're set, you keep everything we built.</p></details>
+    </div>
+  </section>
+
+  <section class="final">
+    <span class="label">Black Friday pricing</span>
+    <h2>Six sessions. One system. <span class="gold">Let's go.</span></h2>
+    <p>Two bonus sessions, two easy payments, and a sales team that potentially closes more of the leads you already have.</p>
+    <div class="cta-block">
+      <a class="cta pay" href="#">Lock in Black Friday: $500 today →</a>
+      <span class="cta-meta">Payment 1 of 2 · Secure checkout by Stripe</span>
+    </div>
+    <div class="ps">
+      <p><b>P.S.</b> The two bonus sessions are what make this work. Most teams need the extra time on objections and follow-up, and this way we don't have to rush either one.</p>
+      <p><b>P.P.S.</b> Questions before you pay? Reply to my email or text me, and we'll sort it out.</p>
+    </div>
+  </section>
+
+  <footer>Esteban Baez Coaching Dojo · Regrowth Agency LLC · estebanbaez.com</footer>
+</div>
+<script>
+  // Stripe Payment Link for payment 1 of 2 ($500). The same link is used for payment 2.
+  const PAY_LINK = "https://buy.stripe.com/8x2aEY3E0gDY8xA8Le5os03";
+  // Optional VSL: paste a YouTube or Loom embed URL here (e.g. https://www.youtube.com/embed/VIDEO_ID). Leave empty to hide the video.
+  const VIDEO_EMBED = "";
+
+  document.querySelectorAll(".pay").forEach(a => {
+    if (PAY_LINK) { a.href = PAY_LINK; a.target = "_blank"; a.rel = "noopener"; }
+    else { a.setAttribute("aria-disabled", "true"); a.textContent = "Payment link coming soon"; }
+  });
+  if (VIDEO_EMBED) {
+    const box = document.getElementById("video");
+    const f = document.createElement("iframe");
+    f.src = VIDEO_EMBED; f.title = "Message from Esteban"; f.allow = "autoplay; fullscreen; picture-in-picture"; f.allowFullscreen = true;
+    box.appendChild(f); box.hidden = false;
+  }
+</script>
+</body>
+</html>
